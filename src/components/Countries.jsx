@@ -18,7 +18,7 @@ const Countries = () => {
             <section className='grid'>
                 {countries.map((country,index) =>
                     // const { name, population, capital, flags, region } = country;
-                    <Link to={`/${country.name.common}`} key={index}>{
+                    <Link to={`/${country.cca2}`} key={index}>{
                         <article >
 
                             <div>

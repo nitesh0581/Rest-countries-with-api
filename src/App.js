@@ -11,7 +11,7 @@ function App() {
     <Header/>
     <Routes>
       <Route exact path="/" element={<><Filter/><Countries/></>}/>     
-      <Route exact path="/:name" element={<Country/>}/>
+      <Route exact path="/:cca2" element={<Country/>}/>
     </Routes>
     </>
   );
