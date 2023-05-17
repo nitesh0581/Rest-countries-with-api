@@ -1,4 +1,3 @@
-
 :root {
   --dark-bg-color: hsl(207, 26%, 17%);
   --article-color: hsl(209, 23%, 22%);
@@ -8,47 +7,59 @@
   --light-mode-background: hsl(0, 0%, 98%);
 }
 
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Nunito Sans', sans-serif; 
+  font-family: 'Nunito Sans', sans-serif;
 }
-img{
+
+img {
   width: 100%;
 }
-body{
-  background-color: #202D36;
-  color:#ffffff;
+
+body {
+  background-color: var(--dark-bg-color);
+  color: var(--text-color);
+}
+
+body.light-theme{
+  background-color: #dfdfdf;
+  color:var(--light-mode-text) ;
 }
 /* button */
 
-.btn-light{
+.btn-light {
   color: white;
   margin: 30px;
 }
 
 /* Header CSS */
 
-.header{
-  display:flex;
+.header {
+  display: flex;
   align-items: center;
   justify-content: space-between;
   background-color: #2b3743;
   padding: 10px 20px;
 }
 
+header.light-theme{
+  background-color: var(--light-mode-background);
+  color:var(--light-mode-text) ;
+}
 /* Filter */
-.filter{
+.filter {
   display: flex;
   flex-direction: column;
   padding: 20px;
 }
-.filter .form-control{
+
+.filter .form-control {
   width: 100%;
 }
 
-.filter .form-control input{
+.filter .form-control input {
   background-color: #2b3743;
   border: none;
   outline: none;
@@ -60,12 +71,13 @@ body{
   margin: 0 0 30px;
   width: 100%;
 }
-.filter .form-control input::placeholder{
+
+.filter .form-control input::placeholder {
   color: white;
 }
 
 
-.filter .region-filter .select{
+.filter .region-filter .select {
   background-color: #2b3743;
   padding: 12px;
   color: #fff;
@@ -77,76 +89,84 @@ body{
 }
 
 /* Grid CSS */
-.grid{
+.grid {
   display: grid;
-  grid-template-columns:1fr;
+  grid-template-columns: 1fr;
   gap: 40px;
   padding: 20px;
 }
 
-.grid article{
+.grid article {
   box-shadow: 0 10px 10px rgba(9, 17, 22, 0.5);
 }
+
 a {
   color: white;
-	text-decoration: none;
+  text-decoration: none;
 }
 
-.grid article img{
+.grid article img {
   border-radius: 5px 5px 0 0;
-  height: 150px;  
+  height: 150px;
 }
 
-.grid .details{
+.grid .details {
   background-color: #2b3743;
-  padding:40px 20px;
-  margin-top:-20px;
+  padding: 40px 20px;
+  margin-top: -20px;
   border-radius: 0 0 5px 5px;
 }
 
-.grid .details h3{
+.grid .details h3 {
   padding-bottom: 10px;
 }
 
-.grid .details h4{
+.grid .details h4 {
   padding-bottom: 5px;
 }
-.grid .details h4 span{
+
+.grid .details h4 span {
   font-weight: 300;
 }
 
-@media (min-width: 640px){
-  .grid{
+@media (min-width: 640px) {
+  .grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-@media (min-width:768px){
-  .filter{
+@media (min-width:768px) {
+  .filter {
     flex-direction: row;
     justify-content: space-between;
   }
-  .filter .form-control{
+
+  .filter .form-control {
     width: auto;
   }
 
 
 
-  .filter .form-control input{
-    
+  .filter .form-control input {
+
     width: auto;
     margin: 0px;
   }
-  .grid{
+
+  .grid {
     grid-template-columns: repeat(3, 1fr);
   }
 }
 
-@media (min-width: 992px){
-  .header, .filter, .grid{
+@media (min-width: 992px) {
+
+  .header,
+  .filter,
+  .grid {
     padding: 20px 100px;
   }
-  .grid{
+
+  .grid {
     grid-template-columns: repeat(4, 1fr);
     gap: 60px;
   }

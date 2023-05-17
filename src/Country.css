@@ -2,7 +2,9 @@
 .country {
     padding: 50px;
 }
-
+.country .borders h3{
+    margin: 20px;
+}
 .btn-light {
     margin-bottom: 30px;
     display: inline-block;
@@ -31,19 +33,6 @@
     font-weight: 600;
 }
 
-.country article .borders {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.country article .borders ul {
-    list-style: none;
-    margin: 10px;
-    background-color:  hsl(209, 23%, 22%);
-    padding: 3px 20px;
-    border-radius: 3px;
-    box-shadow: 0 5px 20px hsla(200, 15%, 8%, 0.5);
-  }
   
   @media (min-width:992px){
     .country article .country-inner{
@@ -54,6 +43,5 @@
     .country .country-details {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
       }
   }

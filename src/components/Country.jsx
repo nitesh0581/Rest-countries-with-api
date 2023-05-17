@@ -54,27 +54,16 @@ const Country = () => {
                                         <h5>Region: <span>{c.region}</span></h5>
                                         <h5>Subregion: <span>{c.subregion}</span></h5>
                                         <h5>Capital: <span>{c.capital}</span></h5>
+
                                     </div>
                                     <div><h5>Top Level Domain: <span>{c.tld}</span></h5>
                                         <h5>Currencies: <span>{currencies.join(',')}</span></h5>
                                         <h5>Languages: <span>{languages.join(',')}</span></h5>
                                     </div>
-                                        </div>
-                                    <h3>Border Countries:</h3>
-                                    <div className="borders">
-                                        {c.borders.map((border) => {
-                                            return (
-                                                <ul key={border}>
-                                                    <li>{border}</li>
-                                                </ul>
-                                            )
-                                        })}
 
                                 </div>
                             </div>
                         </article>
-
-
                     )
                 })}
 
