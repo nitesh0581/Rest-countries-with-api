@@ -1,10 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 
 const Filter = () => {
+    const [searchInput, setSearchInput]=useState("");
+
+    const searchCountries=(value)=>{
+        setSearchInput(value);
+    }
+    
     return (
         <section className="filter">
-            <form className="form-control" id="form">
-                <input type="search" name="search" id="search" placeholder="Search for a country" />
+            <form className="form">
+                <input type="search" name="search" id="search" placeholder="Search for a country" onChange={(e)=>searchCountries(e.target.value)} value={searchInput}/>
             </form>
 
             <div className="region-filter">

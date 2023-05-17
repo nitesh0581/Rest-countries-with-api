@@ -19,7 +19,7 @@ const Country = () => {
     }, [cca2])
     return (
         <>
-            <Link to='/' className="btn-light"><i class="fa-solid fa-arrow-left"></i>Back Home</Link>
+            <Link to='/' className="btn btn-light"> <i class="fa-solid fa-arrow-left"></i>Back Home</Link>
             <section className="country">
                 {country.map((c, index) => {
 
