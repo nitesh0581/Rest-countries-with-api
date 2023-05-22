@@ -5,7 +5,7 @@ const url = "https://restcountries.com/v3.1/all";
 const Countries = () => {
     const [countries, setCountries] = useState([]);
 
-    useEffect(() => {
+    useEffect(()=>{
         const fetchCountriesData = async () => {
             const response = await fetch(url);
             const newCountries = await response.json();
@@ -13,6 +13,7 @@ const Countries = () => {
         }
         fetchCountriesData();
     }, []);
+
     return (
         <>
             <section className='grid'>
@@ -26,7 +27,7 @@ const Countries = () => {
                             </div>
 
                             <div className="details">
-                                <h3><span>{country.name.common}</span></h3>
+                                <h3 className='country-name'><span>{country.name.common}</span></h3>
                                 <h4>Population: <span>{country.population}</span></h4>
                                 <h4>Region: <span>{country.region}</span></h4>
                                 <h4>Capital: <span>{country.capital}</span></h4>
