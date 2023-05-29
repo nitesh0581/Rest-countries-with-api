@@ -1,18 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 
-const url = "https://restcountries.com/v3.1/all";
-const Countries = () => {
-    const [countries, setCountries] = useState([]);
 
-    useEffect(()=>{
-        const fetchCountriesData = async () => {
-            const response = await fetch(url);
-            const newCountries = await response.json();
-            setCountries(newCountries);
-        }
-        fetchCountriesData();
-    }, []);
+const Countries = ({countries}) => {
+
+
 
     return (
         <>

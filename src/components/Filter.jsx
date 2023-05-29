@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 
 const Filter = ({
-  setFiltered,
   setCountries,
   countries,
 }) => {
@@ -34,7 +33,6 @@ const Filter = ({
 
   const [searchInput, setSearchInput] = useState("");
 
-
   // Search countries
   const searchCountries = (searchValue) => {
     setSearchInput(searchValue);
@@ -46,16 +44,16 @@ const Filter = ({
           .toLowerCase()
           .includes(searchValue.toLowerCase())
       );
-      setFiltered(filteredCountries);
+      setCountries(filteredCountries);
     } else {
-      setFiltered(countries);
+      setCountries(countries);
     }
   };
 
   // Filter by region
   const filterRegions = async (region) => {
-    if (region === "All") {
-      setFiltered(countries);
+    if (region.desc === "All") {
+      setCountries(countries);
     } else {
       const url = `https://restcountries.com/v3.1/region/${region}`;
       const res = await fetch(url);
