@@ -13,7 +13,6 @@ const Country = () => {
             const response = await axios.get(`https://restcountries.com/v3.1/alpha?codes=${cca2}`);
             const newCountry = response.data;
             setCountry(newCountry);
-            console.log(newCountry);
         }
         fetchCountryData();
     }, [cca2])
