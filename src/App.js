@@ -46,7 +46,7 @@ function App() {
           country.name.common.toLowerCase().includes(searchInput.toLowerCase())
           && country.region === region)
       } else {
-        countriesToRender = countries.filter(country => country.region === region)
+        countriesToRender = countries.filter(country => country.region===region);
       }
     }
   }
