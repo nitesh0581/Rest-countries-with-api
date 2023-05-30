@@ -38,6 +38,9 @@
         grid-template-columns: repeat(2,1fr);
         gap: 40px;
     }
+    img{
+        height: 40vh;
+    }
     .country .country-details {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
