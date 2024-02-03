@@ -19,7 +19,7 @@ const Countries = ({countries}) => {
                             </div>
 
                             <div className="details">
-                                <h3 className='country-name'><span>{country.name.common}</span></h3>
+                                <h3 className='country-name'><span>{country.name.common.split(" ").slice(0,2).join(" ")}</span></h3>
                                 <h4>Population: <span>{country.population}</span></h4>
                                 <h4>Region: <span>{country.region}</span></h4>
                                 <h4>Capital: <span>{country.capital}</span></h4>
